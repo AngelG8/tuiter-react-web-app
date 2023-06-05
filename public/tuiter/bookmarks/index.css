@@ -1,0 +1,82 @@
+.wd-bookmarks-top-bar {
+    padding: 10px;
+    width: auto;
+}
+
+.wd-bookmarks-title {
+    font-weight: bold;
+    font-size: 18px;
+    padding-left: 32px;
+}
+
+.wd-bookmarks-ellipsis {
+    float: right;
+    position: relative;
+}
+
+.wd-bookmarks-all-tuits {
+    border-collapse: collapse;
+}
+
+.wd-bookmarks-all-tuits tr {
+    border: 2px solid #F0F3F4;
+}
+
+.wd-bookmarks-all-tuits td {
+    padding: 10px;
+}
+
+.wd-bookmarks-tuit-content {
+    margin-left: 12px;
+}
+
+.wd-bookmarks-tuit-list {
+    list-style: none;
+    padding-left: 0px;
+    line-height: 1.5;
+}
+
+.wd-bookmarks-profile-picture {
+    height: 48px;
+    width: 48px;
+    margin-left: 12px;
+    border-radius: 64px;
+}
+
+.wd-bookmarks-tuit-username {
+    font-weight: bold;
+}
+
+.wd-bookmarks-tuit-ellipsis {
+    color: #515F6D;
+    float: right;
+    position: relative;
+}
+
+.wd-bookmarks-tuit-preview {
+    border: 2px solid #F0F3F4;
+    border-radius: 16px;
+    width: 420px;
+}
+
+.wd-bookmarks-tuit-preview-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+
+.wd-bookmarks-tuit-caption {
+    list-style: none;
+    padding-left: 10px;
+}
+
+.wd-bookmarks-tuit-caption-title {
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+.wd-bookmarks-actions td {
+    width: 100px;
+}
