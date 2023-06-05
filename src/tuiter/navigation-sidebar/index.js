@@ -4,7 +4,7 @@ const NavigationSidebar = () => {
     const { pathname } = useLocation();
     const [ignore, tuiter, active] = pathname.split("/");
     const links = ["home", "explore", "notifications", "messages", "bookmarks", "lists", "profile", "more"];
-    const icons = ["fas fa-home", "fas fa-hashtag", "fas fa-bell", "fas fa-envelope", "fas fa-list", "fas fa-user", "fas fa-ellipsis-h"];
+    const icons = ["fas fa-home", "fas fa-hashtag", "fas fa-bell", "fas fa-envelope", "fas fa-bookmark", "fas fa-list", "fas fa-user", "fas fa-ellipsis-h"];
     return (
         <div className="list-group">
             {links.map((link, index) =>

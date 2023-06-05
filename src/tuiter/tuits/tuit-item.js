@@ -2,6 +2,7 @@ import React from "react"
 import { useDispatch } from "react-redux";
 import { deleteTuit } from "../reducers/tuits-reducer";
 import "./tuit-item.css";
+import TuitStats from "./tuit-stats"
 
 const TuitItem = (
     {
@@ -40,20 +41,8 @@ const TuitItem = (
                         <div><span className="fw-bolder">{tuit.userName}</span> <i className="fas fa-check-circle wd-blue"></i> {tuit.handle} • {tuit.time}</div>
                         <div>{tuit.tuit}</div>
                     </div>
-                    <div className="row">
-                        <div className="col-3">
-                            <div><i className="fas fa-comment"></i> {tuit.replies}</div>
-                        </div>
-                        <div className="col-3">
-                            <div><i className="fas fa-retweet"></i> {tuit.retuits}</div>
-                        </div>
-                        <div className="col-3">
-                            <div><i className={heartIcon}></i> {tuit.likes}</div>
-                        </div>
-                        <div className="col-3">
-                            <div><i className="fas fa-upload"></i></div>
-                        </div>
-                    </div>
+                    <br></br>
+                    <TuitStats />
                 </div>
             </div>
 
