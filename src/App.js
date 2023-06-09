@@ -1,3 +1,4 @@
+import '@fortawesome/fontawesome-free/css/all.min.css';
 import Labs from "./labs";
 import HelloWorld from "./labs/a3/hello-world";
 import Tuiter from "./tuiter";
