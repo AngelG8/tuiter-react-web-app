@@ -1,6 +1,6 @@
 import React from "react"
 import { useDispatch } from "react-redux";
-import { deleteTuit } from "../reducers/tuits-reducer";
+import { deleteTuitThunk } from "../services/tuits-thunks";
 import "./tuit-item.css";
 import TuitStats from "./tuit-stats"
 
@@ -22,10 +22,9 @@ const TuitItem = (
     }
 
 ) => {
-    const heartIcon = tuit.liked ? "fas fa-heart liked" : "fas fa-heart";
     const dispatch = useDispatch();
     const deleteTuitHandler = (id) => {
-        dispatch(deleteTuit(id));
+        dispatch(deleteTuitThunk(id));
     }
 
     return (
@@ -42,7 +41,7 @@ const TuitItem = (
                         <div>{tuit.tuit}</div>
                     </div>
                     <br></br>
-                    <TuitStats />
+                    <TuitStats key={tuit._id} tuit={tuit} />
                 </div>
             </div>
 

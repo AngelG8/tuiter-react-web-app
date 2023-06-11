@@ -6,18 +6,19 @@ import { BsEmojiSmile } from "react-icons/bs";
 import { BiBold, BiItalic } from "react-icons/bi";
 import { TbCalendarStats } from "react-icons/tb";
 
-import { createTuit } from "./reducers/tuits-reducer";
+import { createTuitThunk } from "./services/tuits-thunks";
 import { useDispatch } from "react-redux";
-
+import { templateTuit } from "./templates/template-tuit"
 
 const WhatsHappening = () => {
     let [whatsHappening, setWhatsHappening] = useState('');
     const dispatch = useDispatch();
     const tuitClickHandler = () => {
         const newTuit = {
+            ...templateTuit,
             tuit: whatsHappening
         }
-        dispatch(createTuit(newTuit));
+        dispatch(createTuitThunk(newTuit));
         setWhatsHappening("");
         console.log(whatsHappening);
     }
