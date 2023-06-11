@@ -31,7 +31,7 @@ function Tuiter() {
                     <div class="col-2 col-lg-1 col-xl-2">
                         <NavigationSidebar />
                     </div>
-                    <div class="col-10 col-lg-8 col-xl-7">
+                    <div class="col-10 col-lg-7 col-xl-6">
                         <Routes>
                             <Route path="/home" element={<HomeScreen />} />
                             <Route path="/explore" element={<ExploreScreen />} />
@@ -41,7 +41,7 @@ function Tuiter() {
                             <Route path="/register" element={<RegisterScreen />} />
                         </Routes>
                     </div>
-                    <div class="col-3 d-none d-lg-block">
+                    <div class="col-4 d-none d-lg-block">
                         <WhoToFollowList />
                     </div>
                 </div>
