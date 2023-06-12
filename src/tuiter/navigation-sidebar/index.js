@@ -16,9 +16,13 @@ const NavigationSidebar = () => {
                     <i className={icons[index]}></i> <span class="d-none d-xxl-inline">{link}</span>
                 </Link>
             )}
-            {!currentUser && <Link className="list-group" to="/tuiter/login">   Login   </Link>}
-            {!currentUser && <Link className="list-group" to="/tuiter/register">Register</Link>}
-            {currentUser && <Link className="list-group" to="/tuiter/profile"> Profile </Link>}
+
+            {!currentUser && <Link className="list-group-item text-capitalize" to="/tuiter/login">
+                <i class="fa-solid fa-right-to-bracket"></i> <span class="d-none d-xxl-inline">Login</span>
+            </Link>}
+            {!currentUser && <Link className="list-group-item text-capitalize" to="/tuiter/register">
+                <i class="fa-solid fa-address-card"></i> <span class="d-none d-xxl-inline">Register</span>
+            </Link>}
         </div>
     );
 };
