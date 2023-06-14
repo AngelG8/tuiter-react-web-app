@@ -25,8 +25,8 @@ function ProfileScreen() {
         fetchData();
     }, []);
 
-    const handleLogout = () => {
-        dispatch(logoutThunk());
+    const handleLogout = async () => {
+        await dispatch(logoutThunk());
         navigate("../login");
     };
 
