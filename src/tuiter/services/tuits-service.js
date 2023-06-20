@@ -1,7 +1,4 @@
 import axios from 'axios';
-import dotenv from "dotenv";
-dotenv.config();
-
 const API_BASE = process.env.REACT_APP_API_BASE;
 const TUITS_API = `${API_BASE}/tuits`;
 
