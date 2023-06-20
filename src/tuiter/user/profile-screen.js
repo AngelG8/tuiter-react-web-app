@@ -5,7 +5,7 @@ import { profileThunk, logoutThunk, updateUserThunk } from "../services/auth-thu
 
 function ProfileScreen() {
     const { currentUser } = useSelector((state) => state.user);
-    const [profile, setProfile] = useState(null);
+    const [profile, setProfile] = useState(currentUser);
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
@@ -18,11 +18,17 @@ function ProfileScreen() {
     };
 
     useEffect(() => {
-        async function fetchData() {
-            const { payload } = await dispatch(profileThunk());
-            setProfile(payload);
-        }
-        fetchData();
+        const fetchProfile = async () => {
+            try {
+                const { payload } = await dispatch(profileThunk());
+                console.log(payload)
+                setProfile(payload);
+            } catch (error) {
+                console.error(error);
+                navigate("/login");
+            }
+        };
+        fetchProfile();
     }, []);
 
     const handleLogout = async () => {
@@ -33,7 +39,7 @@ function ProfileScreen() {
     return (
         <div>
             <h1>Profile Screen</h1>
-            {profile && currentUser && (
+            {profile && (
                 <div>
                     <div>
                         <label>First Name</label>
@@ -52,7 +58,7 @@ function ProfileScreen() {
                         <input
                             className="form-control"
                             type="text"
-                            value={profile.lastName}
+                            value={profile.lastName ?? ""}
                             onChange={(event) => {
                                 const newProfile = { ...profile, lastName: event.target.value };
                                 setProfile(newProfile);
